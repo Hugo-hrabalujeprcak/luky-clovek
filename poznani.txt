@@ -1,0 +1,32 @@
+using System;
+ 
+class Program
+{
+    static void Main()
+    {
+        // Požádáme uživatele o zadání jména
+        Console.Write("Zadej své jméno: ");
+        string jmeno = Console.ReadLine();  // Načteme jméno
+ 
+        // Požádáme uživatele o zadání věku
+        Console.Write("Zadej svůj věk: ");
+        int vek = int.Parse(Console.ReadLine());  // Načteme věk a převedeme na celé číslo
+ 
+        // Požádáme uživatele o zadání výšky
+        Console.Write("Zadej svou výšku v metrech: ");
+        double vyska = double.Parse(Console.ReadLine());  // Načteme výšku a převedeme na desetinné číslo
+ 
+        // Požádáme uživatele, jestli je student
+        Console.Write("Jsi student? (ano/ne): ");
+        string odpoved = Console.ReadLine().ToLower();  // Načteme odpověď a převedeme na malá písmena
+ 
+        bool jeStudent = (odpoved == "ano");  // Pokud odpověděl "ano", jeStudent bude true
+ 
+        // Vypíšeme informace o uživateli
+        Console.WriteLine("\n--- Informace o uživateli ---");
+        Console.WriteLine("Jméno: " + jmeno);
+        Console.WriteLine("Věk: " + vek);
+        Console.WriteLine("Výška: " + vyska);
+        Console.WriteLine("Je student: " + (jeStudent ? "Ano" : "Ne"));
+    }
+}DSS
